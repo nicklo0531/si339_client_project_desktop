@@ -9,7 +9,11 @@
 </head>
 <body id="body_404">
 
-    <main>
+    <header>
+        <a class="skip" href="#main" tabindex="0">Skip to Main content</a>
+    </header>
+
+    <main id="main">
         <div id="div_404">
             <div>
                 <p id="error_404">🛫 404 Page 🛬</p>
@@ -20,6 +24,16 @@
         </div>
         
     </main>
+
+    <footer>
+        <p>&copy; Copyrights <span id="year"></span> by UMSI. All Rights Reserved</p>
+        <p><a href="https://sites.google.com/umich.edu/bsiacademicadvising/student-support-resources">BSI Academic Advising</a></p>
+    </footer>
+
+    <script>
+        document.getElementById('year').innerHTML = new Date().getFullYear();
+    </script>
+
 </body>
 
 </html>
