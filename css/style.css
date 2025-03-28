@@ -411,18 +411,19 @@ footer a:hover {
 /* tutoring site */
 .tutoring_site_images {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     /* justify-content: center; */
     justify-items: center;
     align-content: center;
     column-gap: 10px;
+    row-gap: 10px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 20px;
 }
 
 .tutoring_site_images img {
-    width: 100%;
+    width: 80%;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -552,11 +553,7 @@ textarea {
     font-size: 100%;
 }
 
-/* .buildings_container:active .overlay, .buildings_container:hover .overlay {
-    opacity: 1;
-} */
-
-.buildings_container .overlay, .buildings_container .overlay {
+.buildings_container .overlay {
     opacity: 1;
 }
 
@@ -595,17 +592,103 @@ textarea {
 
 
 /* desktop view */
-@media (min-width: 1200px) {
+@media (min-width: 800px) {
+    /* index.html */
+    #index_section_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+    }
 
+    #index_section_container:nth-child(n) {
+        padding-left: 20px;
+    }
+    
+    #index_section_container:nth-child(2n) {
+        padding-right: 20px;
+    }
 
+    /* academic success */
+    .academic_success_images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .academic_success_images img {
+        width: 22%;
+        border-radius: 10px;
+        margin-bottom: 5px;
+    }
 
+    /* tutoring site */
+    .tutoring_site_images {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        align-content: center;
+        column-gap: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+    }
 
+    .tutoring_site_images img {
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 
+    /* study spaces */
+    #other_study_spaces {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 
+    #nq_img {
+        width: 80%;
+    }
+
+    .buildings_container img {
+        width: 95%;
+    }
+
+    .overlay {
+        position: absolute;
+        width: 95%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        opacity: 0;
+        border-radius: 8px;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .overlay p {
+        font-size: 100%;
+    }
+
+    .buildings_container .overlay {
+        opacity: 0;
+    }
+
+    .buildings_container .overlay:hover {
+        opacity: 1;
+    }
+
+    #nq_overlay {
+        width: 80%;
+    }
 }
 
 
-
-
-
-
+/* prefer reduce motion for the overlay on page 3 */
+@media (prefers-reduced-motion: reduce) {
+    .buildings_container .overlay {
+        opacity: 1;
+    }
+}
