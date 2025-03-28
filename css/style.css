@@ -56,8 +56,8 @@ body {
 
 .navbar a {
     color: black;
-    font-weight: bold;
-    font-size: 100%;
+    font-weight: light;
+    font-size: 120%;
     color: #00274C;
     text-align: center;
     width: 100%;
@@ -80,6 +80,26 @@ h1 {
     margin: 0;
     padding-top: 2%;
     color: #00274C;
+}
+
+.active {
+    /* background-color: #00274C; */
+    /* color: #FFCB05; */
+    /* color: #FFFFFF; */
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+/* .active a {
+    color: #FFCB05;
+} */
+
+#zoom img:hover {
+    zoom: 120%;
+}
+
+.header-container img {
+    padding-left: 10px;
 }
 
 /* index.html */
@@ -453,6 +473,33 @@ footer a:hover {
     margin-top: 10px;
 }
 
+#form_div {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+fieldset {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#submit_button:hover {
+    background-color: #add8e6; /* Optional: Changes the button color when hovered */
+}
+
+#tutoring_more_info {
+    padding-left: 5%;
+}
+
 /* study spaces */
 .study_spaces_page h2 {
     text-align: center;
@@ -512,3 +559,53 @@ footer a:hover {
 .buildings_container .overlay, .buildings_container .overlay {
     opacity: 1;
 }
+
+/* 404 page */
+#body_404 {
+    background-color: #e6f7ff;
+}
+
+#div_404 {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#error_404 {
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 80px;
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+#description_404, #guide_404 {
+    font-size: 25px;
+}
+
+
+#tower_img {
+    max-width: 50%;
+    justify-self: center;
+    padding-top: 20px;
+}
+
+
+/* desktop view */
+@media (min-width: 1200px) {
+
+
+
+
+
+
+}
+
+
+
+
+
+

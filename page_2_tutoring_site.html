@@ -13,7 +13,7 @@
         <h1>~UMSI Student Resource Portal~</h1>
         <a class="skip" href="#main" tabindex="0">Skip to Main content</a>
         <!-- <div class="skip"><a href="#main" tabindex="0">Skip to Main Content</a></div> -->
-        <div class="header-container">
+        <div class="header-container" id="zoom">
             <a href="index.html">
                 <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo" id="logo">
             </a>
@@ -21,7 +21,7 @@
                 <ul class="navbar">
                     <!-- <li><a href="index.html">Home</a></li> -->
                     <li><a href="page_1_academic_success.html">Academic Success</a></li>
-                    <li><a href="page_2_tutoring_site.html">Tutoring Site</a></li>
+                    <li class="active"><a href="page_2_tutoring_site.html">Tutoring Site</a></li>
                     <li><a href="page_3_study_spaces.html">Study Spaces</a></li>
                 </ul>
             </nav>
@@ -48,14 +48,60 @@
                 <li><a href = "https://sites.google.com/umich.edu/umsitutoring/umsi-programming-tutoring?authuser=0">Programming Peer Tutoring</a></li>
                 <li><a href = "https://sites.google.com/umich.edu/umsitutoring/umsi-math-tutoring?authuser=0">Math Peer Tutoring</a></li>
             </ol>
-            <p>Besides peer tutoring, office hours are also a great way to receive academic support.</p>
-            <p>For more information regarding student support and tutoring, please email umsi.academicsuccess@umich.edu.</p>
         </div>
+
+        <div id="form_div">
+            <form action="https://formspree.io/f/mqapdady" method="POST">
+                <fieldset>
+                    <legend>What programming/math classes are you taking this semester?</legend>
+                    <input type="checkbox" id="SI325" name="classes" value="SI325">
+                    <label for="SI325">SI325</label><br>
+
+                    <input type="checkbox" id="SI201" name="classes" value="SI201">
+                    <label for="SI201">SI201</label><br>
+
+                    <input type="checkbox" id="SI345" name="classes" value="SI345">
+                    <label for="SI345">SI345</label><br>
+
+                    <input type="checkbox" id="SI385" name="classes" value="SI385">
+                    <label for="SI385">SI385</label>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Would you like to attend one of our tutoring sessions?</legend>
+                    <input type="radio" id="yes_session" name="classes", value="yes_session">
+                    <label for="yes_session">Yes</label>
+                    <input type="radio" id="no_session" name="classes", value="no_session">
+                    <label for="no_session">No</label>
+                    <br>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Please briefly describe what you wish us to mainly focus on in the sessions.</legend>
+                    <label for="question">Ex. content review, problem-solving, etc</label>
+                    <textarea name="question" id="question"></textarea>
+                </fieldset>
+                <input type="submit" value ="Submit!" id="submit_button">
+            </form>
+        </div>
+
+        <br>
+        <div id="tutoring_more_info">
+            <p>💡 Besides peer tutoring, office hours are also a great way to receive academic support.</p>
+            <p>💡 For more information regarding student support and tutoring, please email umsi.academicsuccess@umich.edu.</p>
+        </div>
+
+
     </main>
 
     <footer>
-        <p>BSI Academic Advising | <a href="https://sites.google.com/umich.edu/bsiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
+        <p>&copy; Copyrights <span id="year"></span> by UMSI. All Rights Reserved</p>
+        <p><a href="https://sites.google.com/umich.edu/bsiacademicadvising/student-support-resources">BSI Academic Advising</a></p>
     </footer>
+
+    <script>
+        document.getElementById('year').innerHTML = new Date().getFullYear();
+    </script>
 </body>
 
 </html>

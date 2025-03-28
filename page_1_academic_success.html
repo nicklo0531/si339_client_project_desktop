@@ -13,14 +13,14 @@
         <h1>~UMSI Student Resource Portal~</h1>
         <a class="skip" href="#main" tabindex="0">Skip to Main content</a>
         <!-- <div class="skip"><a href="#main" tabindex="0">Skip to Main Content</a></div> -->
-        <div class="header-container">
+        <div class="header-container" id="zoom">
             <a href="index.html">
                 <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo" id="logo">
             </a>
             <nav>
                 <ul class="navbar">
                     <!-- <li><a href="index.html">Home</a></li> -->
-                    <li><a href="page_1_academic_success.html">Academic Success</a></li>
+                    <li class="active"><a href="page_1_academic_success.html">Academic Success</a></li>
                     <li><a href="page_2_tutoring_site.html">Tutoring Site</a></li>
                     <li><a href="page_3_study_spaces.html">Study Spaces</a></li>
                 </ul>
@@ -63,8 +63,13 @@
     </main>
 
     <footer>
-        <p>BSI Academic Advising | <a href="https://sites.google.com/umich.edu/bsiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
+        <p>&copy; Copyrights <span id="year"></span> by UMSI. All Rights Reserved</p>
+        <p><a href="https://sites.google.com/umich.edu/bsiacademicadvising/student-support-resources">BSI Academic Advising</a></p>
     </footer>
+
+    <script>
+        document.getElementById('year').innerHTML = new Date().getFullYear();
+    </script>
     
 </body>
 
